@@ -7,20 +7,22 @@ h1 Coins
     thead
       tr
         th id
-        th acronym 
+        th acronym
+        th icon
         th coin name
-        th = ""
-        th = ""
+        th colspan="2" align="center" actions
     tbody
       - @coins.each do |coin|
         tr
-          b
+          strong
             td = coin.id
           td = coin.acronym
+          td
+            = image_tag coin.url_image, size:"25x25"
           td = coin.short_description
           td
-            = link_to "show", coin_path(coin)
-          td
-            = button_to "delete", coin_path(coin), method: :delete
+            .btn-group role="group"
+              = link_to "show", coin_path(coin), class: "btn btn-primary"
+              = button_to "delete", coin_path(coin), method: :delete, class: "btn btn-secondary btn-danger"
 
 = link_to "New coin", new_coin_path

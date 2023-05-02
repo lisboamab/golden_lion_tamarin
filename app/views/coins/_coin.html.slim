@@ -10,7 +10,4 @@ div id="#{dom_id coin}"
     =< coin.acronym
   p
     strong Url image:
-    =< coin.url_image
-  p
-    strong Active:
-    =< coin.active
+    =< image_tag coin.url_image, size:"25x25"
