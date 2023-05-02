@@ -1,0 +1,26 @@
+p style="color: green" = notice
+
+h1 Coins
+
+#coins
+  table.table
+    thead
+      tr
+        th id
+        th acronym 
+        th coin name
+        th = ""
+        th = ""
+    tbody
+      - @coins.each do |coin|
+        tr
+          b
+            td = coin.id
+          td = coin.acronym
+          td = coin.short_description
+          td
+            = link_to "show", coin_path(coin)
+          td
+            = button_to "delete", coin_path(coin), method: :delete
+
+= link_to "New coin", new_coin_path
