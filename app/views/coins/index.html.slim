@@ -23,6 +23,6 @@ h1 Coins
           td
             .btn-group role="group"
               = link_to "show", coin_path(coin), class: "btn btn-primary"
-              = button_to "delete", coin_path(coin), method: :delete, class: "btn btn-secondary btn-danger"
+              = button_to "delete", coin_path(coin), method: :delete, class: "btn btn-danger"
 
 = link_to "New coin", new_coin_path
