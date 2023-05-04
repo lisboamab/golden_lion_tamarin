@@ -57,6 +57,8 @@ gem "slim-rails"
 # autenticate
 #gem devise
 
+gem 'simple_form'
+
 
 
 group :development, :test do

@@ -1,30 +1,33 @@
-= form_with(model: @coin) do |form|
+= simple_form_for @coin do |f|
   - if @coin.errors.any?
     div style="color: red"
       h2 = "#{pluralize(@coin.errors.count, "error")} prohibited this coin from being saved:"
       ul
         - @coin.errors.each do |error|
           li = error.full_message
+  form
+    .row
+      .form-group
+        .col-sm-5
+          = f.input :short_description, label: "Name", input_html: { class: 'form-control' }
+        .col-sm-5
+          = f.input :acronym, input_html: { class: 'form-control', placeholder: 'BTC' }
+    .form-group
+      .col-sm-12 style="margin-bottom: 0px !important;"
+        = f.input :long_description, input_html: { class: 'form-control', style: 'margin-bottom: 0px !important;' }
+        small class="form-text text-muted" We'll never share your email with anyone else
+    .form-group
+      .col-sm-12
+        = f.input :url_image, input_html: { class: 'form-control'}
+    br
+    br
+    .row
+      .form-group
+        .form-check.form-switch
+          = f.check_box :active, class: 'form-check-input'
+          = f.label class: 'form-check-label'
+              | Example checkbox
 
-  div
-    = form.label :short_description, style: "display: block"
-    = form.text_field :short_description
-
-  div
-    = form.label :long_description, style: "display: block"
-    = form.text_area :long_description
-
-  div
-    = form.label :acronym, style: "display: block"
-    = form.text_field :acronym
-
-  div
-    = form.label :url_image, style: "display: block"
-    = form.text_field :url_image
-
-  div
-    = form.label :active, style: "display: block"
-    = form.check_box :active
-
-  div
-    = form.submit
+    .form-group
+      .col-sm-offset-2.col-sm-10
+        = f.button :submit, class: 'btn btn-primary'
