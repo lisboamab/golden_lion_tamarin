@@ -26,3 +26,25 @@ h1 Coins
               = button_to "delete", coin_path(coin), method: :delete, class: "btn btn-danger"
 
 = link_to "New coin", new_coin_path
+
+.card style="margin: 5rem;"
+  h2.card-header Coins
+  .card-body
+    .card-deck 
+      .row
+        - @coins.each do |coin|
+          .col-sm-3
+            .card.bg-light.mb-3
+              .card-body
+                h4.card-title 
+                  = coin.short_description
+                p Acronym: #{coin.acronym}
+                p Icon: #{image_tag coin.url_image, size:"25x25"}
+                p.justified-text = coin.long_description
+                small.text-muted cadastrado em: #{coin.created_at}
+              .card-footer
+                .btn-group role="group"
+                  = link_to "show", coin_path(coin), class: "btn btn-primary"
+                  = link_to "edit", edit_coin_path(coin), class:"btn btn-success"
+                  = button_to "delete", coin_path(coin), method: :delete, class: "btn btn-danger"
+            
