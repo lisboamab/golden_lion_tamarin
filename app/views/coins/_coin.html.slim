@@ -1,10 +1,7 @@
-div id="#{dom_id coin}"
-  p
-    strong Short description:
-    =< coin.short_description
-  p
-    strong Long description:
-    =< coin.long_description
+.jumbotron.mt-5.p-5.rounded
+  h2.h1-responsive = coin.short_description
+  p.lead = coin.long_description
+  hr.my-2
   p
     strong Acronym:
     =< coin.acronym
