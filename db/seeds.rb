@@ -66,5 +66,5 @@ coins = [
 ]
 
 coins.each do |coin|
-  Coin.create!(coin)
+  Coin.find_or_create_by(coin)
 end
