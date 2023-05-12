@@ -1,5 +1,7 @@
 class Coin < ApplicationRecord
+  belongs_to :mining_type, optional: true #o 'optional: true' remove a obrigatoriedade do belongs_to
   before_validation :validate_url
+
 
   private
 
