@@ -12,7 +12,8 @@ coins = [
     long_description: "Launched in 2009, Bitcoin is the world's largest cryptocurrency by market capitalization. Unlike fiat currency, Bitcoin is created, distributed, traded, and stored using a decentralized ledger system known as a blockchain.",
     acronym: "BTC",
     url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png",
-    active: true
+    active: true,
+    mining_type_id: 1
   },
   {
     short_description: "Dogecoin",
@@ -26,7 +27,8 @@ coins = [
     long_description: "Ethereum is a decentralized blockchain platform that establishes a peer-to-peer network that securely executes and verifies application code, called smart contracts. Smart contracts allow participants to transact with each other without a trusted central authority.",
     acronym: "ETH",
     url_image: "https://img.uxwing.com/wp-content/themes/uxwing/download/brands-social-media/ethereum-eth-icon.png",
-    active: true
+    active: true,
+    mining_type_id: 1
   },
   {
     short_description: "Litecoin",

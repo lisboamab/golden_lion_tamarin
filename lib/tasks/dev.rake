@@ -8,7 +8,7 @@ namespace :dev do
       show_spinner("Drop DB"){ %x(rails db:drop) }
       show_spinner("Create DB"){ %x(rails db:create) }
       show_spinner("Migrate DB"){ %x(rails db:migrate) }
-      show_spinner("Populating DB"){ %x(rails db:seed) }
+      show_spinner("Populating DB"){ %x(rails dev:add_mining_types db:seed) }
     else
       puts Rainbow("You are not in development environment").red.bright
     end
