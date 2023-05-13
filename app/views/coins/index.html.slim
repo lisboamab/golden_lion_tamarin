@@ -13,6 +13,7 @@ p style="color: green" = notice
                   = coin.short_description
                 p Acronym: #{coin.acronym}
                 p Icon: #{image_tag coin.url_image, size:"25x25"}
+                p Mining Type: #{coin.mining_type.acronym}
                 p.justified-text = coin.long_description
                 small.text-muted cadastrado em: #{coin.created_at}
               .card-footer
