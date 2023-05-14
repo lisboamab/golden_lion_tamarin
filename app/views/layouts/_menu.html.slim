@@ -1,0 +1,18 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light style="padding-left: 10px"
+  = link_to root_path, class: 'navbar-brand' do
+    | Golden Lion Tamarin
+  .collapse.navbar-collapse#navbarSupportedContent
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        = link_to 'Home', root_path, class: 'nav-link'
+      li.nav-item.active
+        = link_to 'Coins', coins_path, class: 'nav-link'
+      li.nav-item.active
+        = link_to 'Mining Types', mining_types_path, class: 'nav-link'
+    ul.navbar-nav.mr-auto style="padding-left: 90rem;"
+      li.nav-item.dropdown.navbar-nav.ml-auto
+        a.nav-link.dropdown-toggle href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          | Language
+        .dropdown-menu.dropdown-menu-right aria-labelledby="navbarDropdown"
+          = link_to 'PT-BR', root_path(locale: 'pt-BR'), class: 'dropdown-item'
+          = link_to 'ENG', root_path(locale: 'en'), class: 'dropdown-item'
