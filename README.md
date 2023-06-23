@@ -7,3 +7,12 @@ this project aims to build a simple crypto wallet for study **Ruby, Rails, CRUD,
 - [x] UML
 - [ ] create project
 - [ ] write to-do list for project -q
+
+
+
+
+## how use
+- after git clone run:
+- bundle install
+- rails dev:setup
+- yarn install
